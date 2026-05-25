@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, Music, Play, Playlist } from 'lucide-react';
+import { Heart, Music, Play, ListMusic } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useAudio } from '../context/AudioContext';
 import { GridSkeleton } from '../components/Skeleton';
@@ -48,7 +48,7 @@ const Library = ({ setActiveTab, setSelectedPlaylistId }) => {
   if (!token) {
     return (
       <div className="flex-1 bg-spotify-dark flex flex-col items-center justify-center p-6 text-center select-none">
-        <Library className="w-16 h-16 text-zinc-600 mb-4" />
+        <ListMusic className="w-16 h-16 text-zinc-600 mb-4" />
         <h2 className="text-xl font-bold text-white mb-2">Enjoy Your Library</h2>
         <p className="text-sm text-zinc-400 max-w-xs mb-6">
           Log in to view and manage your playlists, favorite tracks, and personalized recommendations.
